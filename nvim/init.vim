@@ -34,6 +34,4 @@ if has('vim_starting') && dein#check_install()
 endif
 
 " config
-
-set clipboard+=unnamedplus
-syntax enable
+execute 'source' fnamemodify(expand('<sfile>'), ':h').'/vimrc'
