@@ -36,3 +36,4 @@ endif
 " config
 
 set clipboard+=unnamedplus
+syntax enable
