@@ -21,3 +21,6 @@ set hlsearch
 set wrapscan
 
 noremap <ESC><ESC> :nohlsearch<CR><ESC>
+
+" 行末の空白削除
+autocmd BufWritePre * :%s/\s\+$//ge
