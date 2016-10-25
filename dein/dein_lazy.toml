@@ -4,3 +4,29 @@ depends = ['context_filetype.vim']
 
 [[plugins]]
 repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+on_if = 1
+on_source = ['denite.nvim']
+
+[[plugins]]
+repo = 'Shougo/neoyank.vim'
+on_if = 1
+on_event = 'TextYankPost'
+on_source = ['denite.nvim']
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+on_cmd = 'Denite'
+hook_add = '''
+  nmap <silent> <C-u><C-p> :<C-u>Denite file_rec<CR>
+  nmap <silent> <C-u><C-g> :<C-u>Denite grep<CR>
+  nmap <silent> <C-u><C-u> :<C-u>Denite file_mru<CR>
+  nmap <silent> <C-u><C-y> :<C-u>Denite neoyank<CR>
+  nnoremap <silent> / :<C-u>Denite line<CR>
+  nnoremap <silent> * :<C-u>DeniteCursorWord line<CR>
+'''
+hook_source = '''
+  source ~/.config/nvim/plugins/denite.vim
+'''
