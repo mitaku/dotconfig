@@ -2,6 +2,9 @@ set clipboard+=unnamedplus
 syntax enable
 filetype plugin indent on
 
+" Use English interface.
+language message C
+
 "---------------------------------------------------------------------------
 " Search:
 "
