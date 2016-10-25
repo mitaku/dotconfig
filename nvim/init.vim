@@ -33,5 +33,7 @@ if has('vim_starting') && dein#check_install()
   call dein#install()
 endif
 
+let g:python3_host_prog = expand('/usr/local/bin/python3')
+
 " config
 execute 'source' fnamemodify(expand('<sfile>'), ':h').'/vimrc'
