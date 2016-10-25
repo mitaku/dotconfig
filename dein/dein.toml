@@ -99,3 +99,9 @@ hook_add = '''
 
   autocmd MyAutoCmd VimEnter * call lightline#colorscheme()
 '''
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = '''
+let g:deoplete#enable_at_startup = 1
+'''
