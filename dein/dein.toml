@@ -108,3 +108,9 @@ let g:deoplete#enable_at_startup = 1
 repo = 'vim-ruby/vim-ruby'
 on_map = '<Plug>'
 on_ft = 'ruby'
+
+[[plugins]]
+repo = 'glidenote/memolist.vim'
+hook_add = '''
+  let g:memolist_denite = 1
+'''
