@@ -18,18 +18,16 @@ on_ft = ['markdown', 'mkd']
 repo = 'nixprime/cpsm'
 build = 'env PY3=ON ./install.sh'
 
-[[plugins]] # カラースキーマ
-repo = 'joshdick/onedark.vim'
+[[plugins]]
+repo = 'jacoborus/tender'
 hook_add = '''
-  " カラースキーマの適用はsource後じゃないといけないので遅延セット
-  autocmd MyAutoCmd VimEnter * colorscheme onedark
-  autocmd MyAutoCmd VimEnter * call lightline#colorscheme()
-'''
-
-[[plugins]] # カラースキーマ
-repo = 'shirataki/lightline-onedark'
-hook_add = '''
-  autocmd MyAutoCmd VimEnter * call lightline#colorscheme()
+ " If you have vim >=8.0 or Neovim >= 0.1.5
+ if (has("termguicolors"))
+  set termguicolors
+ endif
+ " Theme
+ autocmd MyAutoCmd VimEnter * colorscheme tender
+ autocmd MyAutoCmd VimEnter * call lightline#colorscheme()
 '''
 
 [[plugins]] # ステータスラインを手軽にかっこ良くする(要フォントパッチ)
@@ -37,7 +35,7 @@ repo = 'itchyny/lightline.vim'
 hook_add = '''
   set noshowmode
   let g:lightline = {
-        \ 'colorscheme': 'landscape',
+        \ 'colorscheme': 'tender',
         \ 'mode_map': { 'c': 'NORMAL' },
         \ 'active': {
         \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
