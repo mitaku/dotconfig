@@ -114,3 +114,7 @@ repo = 'glidenote/memolist.vim'
 hook_add = '''
   let g:memolist_denite = 1
 '''
+
+[[plugins]]
+repo = 'stephpy/vim-yaml'
+on_ft = 'yaml'
