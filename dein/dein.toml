@@ -112,3 +112,7 @@ on_ft = 'ruby'
 [[plugins]]
 repo = 'stephpy/vim-yaml'
 on_ft = 'yaml'
+
+[[plugins]]
+repo = 'posva/vim-vue'
+on_ft = 'vue'
