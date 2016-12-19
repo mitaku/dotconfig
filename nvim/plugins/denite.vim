@@ -12,11 +12,11 @@ call denite#custom#var('grep', 'default_opts',
 call denite#custom#source('file_rec', 'matchers', ['matcher_cpsm'])
 call denite#custom#source('file_mru', 'converters', ['converter_relative_word'])
 
-call denite#custom#map('insert', "\<C-j>", 'move_to_next_line')
-call denite#custom#map('insert', "\<C-k>", 'move_to_prev_line')
-call denite#custom#map('insert', "\<C-n>", 'move_to_next_line')
-call denite#custom#map('insert', "\<C-p>", 'move_to_prev_line')
-call denite#custom#map('insert', ';', 'enter_mode:normal')
+call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
+call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
+call denite#custom#map('insert', '<C-k>', '<denite:move_to_prev_line>', 'noremap')
+call denite#custom#map('insert', '<C-p>', '<denite:move_to_prev_line>', 'noremap')
+"call denite#custom#map('insert', ';', '<denite:enter_mode:normal>', 'noremap')
 
 call denite#custom#var('file_rec/git', 'command', ['git', 'ls-files', '-co', '--exclude-standard'])
 "call denite#custom#alias('source', 'file_rec/git', 'file_rec')
